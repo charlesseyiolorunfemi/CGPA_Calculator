@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CGPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>CGPA Calculator</h1>
+            <p>Calculate your academic performance</p>
+        </header>
+
+        <section class="result-box">
+            <p>Your CGPA</p>
+            <h2 id="cgpa">0.00</h2>
+
+            <div class="stats">
+                <div>
+                    <span id="totalUnits">0</span>
+                    <p>Total Units</p>
+                </div>
+
+                <div>
+                    <span id="totalPoints">0</span>
+                    <p>Quality Points</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-section">
+
+            <h3>Add Your Courses</h3>
+
+            <div class="input-group">
+                <label for="courseName">Course Name</label>
+                <input
+                    type="text"
+                    id="courseName"
+                    placeholder="e.g. CSC 101"
+                >
+            </div>
+
+            <div class="input-row">
+
+                <div class="input-group">
+                    <label for="grade">Grade</label>
+
+                    <select id="grade">
+                        <option value="5">A</option>
+                        <option value="4">B</option>
+                        <option value="3">C</option>
+                        <option value="2">D</option>
+                        <option value="1">E</option>
+                        <option value="0">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="unit">Credit Unit</label>
+
+                    <input
+                        type="number"
+                        id="unit"
+                        placeholder="e.g. 3"
+                        min="1"
+                        step="1"
+                    >
+                </div>
+
+            </div>
+
+            <button id="addBtn">+ Add Course</button>
+
+        </section>
+
+        <section class="course-list-section">
+
+            <div class="list-heading">
+                <h3>Your Courses</h3>
+                <span id="courseCount">0 Courses</span>
+            </div>
+
+            <div id="courseList">
+                <p class="empty-message">
+                    No courses added yet.
+                </p>
+            </div>
+
+        </section>
+
+        <div class="action-buttons">
+            <button id="calculateBtn">Calculate CGPA</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+       
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
